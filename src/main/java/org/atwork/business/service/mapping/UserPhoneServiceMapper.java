@@ -27,8 +27,8 @@ public class UserPhoneServiceMapper extends AbstractServiceMapper {
 	}
 
 	/**
-	 * Mapping from 'NMyuspprefEntity' to 'NMyusppref'
-	 * @param nMyuspprefEntity
+	 * Mapping from 'UserPhoneEntity' to 'UserPhone'
+	 * @param userPhoneEntity
 	 */
 	public UserPhone mapUserPhoneEntityToUserPhone(UserPhoneEntity userPhoneEntity) {
 		if(userPhoneEntity == null) {
@@ -57,7 +57,7 @@ public class UserPhoneServiceMapper extends AbstractServiceMapper {
 		//--- Generic mapping 
 		map(userPhone, userPhoneEntity);
 
-		//--- Link mapping ( link : nMyusppref )
+		//--- Link mapping ( link : userPhone )
 		if( hasLinkToUser(userPhone) ) {
 			UserEntity userEntity = new UserEntity();
 			userEntity.setUserId(userPhone.getUserId());
